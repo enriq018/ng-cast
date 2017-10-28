@@ -5,11 +5,14 @@ angular.module('video-player')
     templateUrl: 'src/templates/search.html',
     
     bindings: {
-      search: '<'
+      search: '<',
+      text: '<'
     },
     controller: function() {
-      this.result = (result) => {
-      };
-      
+      this.result = (someInput) => {
+        //this.youTube.saerch(someInput);
+        this.someInput = '';
+      },
+      this.text = '';
     }
   });
