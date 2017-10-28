@@ -14,10 +14,11 @@ angular.module('video-player')
           this.videos = data.data.items;
           this.currentVideo = data.data.items[0];
         });
-      };
+      },
+      this.searchResults('keyboard cat');
     }
   });
 
-// clear search after being entered or rendered
+//clear search after being entered or rendered
 // keycode 13 ---> keypress ng
-// double check learn to see what is next 
+//double check learn to see
