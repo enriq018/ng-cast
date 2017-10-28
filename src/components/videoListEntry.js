@@ -1,12 +1,13 @@
 angular.module('video-player')
   .component('videoListEntry', {
     // TODO
-    templateUrl: 'src/templates/videoPlayer.html',
+    templateUrl: 'src/templates/videoListEntry.html',
     bindings: {
-      onClick: '<'
+      onClick: '<',
+      video: '<'
     },
     
-    controller: function () {
-      this.video; //will hold a video object with url title and description
-    }
+    // controller: function () {
+    //   console.log(this)
+    // }
   });

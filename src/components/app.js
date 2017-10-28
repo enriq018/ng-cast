@@ -3,18 +3,19 @@ angular.module('video-player')
   
   
   .component('app', {
-    // TODO
     templateUrl: 'src/templates/app.html',
     
-    
     bindings: {
-      
     },
-    controller: function() {
+    controller: function(youTube) {
       this.currentVideo = window.exampleVideoData[1],
       this.videos = window.exampleVideoData,
-      //console.log(window.exampleVideoData.video.snippet.thumbnails.default.url)
-      this.selectVideo = video => { this.currentVideo = video; },
-      this.searchResults = data => {};
+      this.selectVideo = (video) => { this.currentVideo = video; },
+      this.searchResults = (data) => {
+        youTube.search(data => {
+          this.videos = data.data.items;
+          this.currentVideo = data.data.items[0];
+        });
+      };
     }
   });
