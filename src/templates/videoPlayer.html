@@ -1,14 +1,9 @@
 <div class="video-player">
   <div class="embed-responsive embed-responsive-16by9">
     <iframe class="embed-responsive-item" ng-src="{{'https://www.youtube.com/embed/'+$ctrl.video.id.videoId}}" allowFullScreen></iframe>
-    
-    <!-- video.snippet.thumbnails.url -->
-    <!-- insert {{url}} here later-->
   </div>
   <div class="video-player-details" >
     <h3>{{$ctrl.video.snippet.title}}</h3>
-    <!-- insert {{title}} here later-->
     <div>{{$ctrl.video.snippet.description}}</div>
-    <!-- insert {{description}} here later-->
   </div>
 </div>
